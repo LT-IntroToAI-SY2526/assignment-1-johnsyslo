@@ -23,7 +23,8 @@ It was good, I've used python before and has always been smooth. I worked a lot 
 I inputted the prompts that gave details such as who, how, why, the length, and extra details. The AI returned a good response with good problems due to the good prompts I gave it. Leaving it not open ended for it to fill it in.
 
 3. **What concepts were most challenging?** How did AI help you understand them?
-My most difficult concept was 
+My most difficult concept was the overall code, like I know how to make a function but I made the silly of mistake of missing `def` in front of it. As well as variables, I had a few times I had `n` instead of `num`.
 
 
 4. **What did you learn about collaborating with AI?** What strategies worked best for learning rather than just getting answers?
+I learned that while it can do really good for coding, unless you provide it with really good context and details on what you need it won't do the best.
