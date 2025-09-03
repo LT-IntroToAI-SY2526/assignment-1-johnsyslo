@@ -99,25 +99,25 @@ Example Input/Output:
 Enter temperature in Fahrenheit: 100
 100°F is 37.8°C
 """
-problem_1(num):
+def problem_1(num):
     return(f"The number is {num}")
 
-problem_2(num):
+def problem_2(num):
     if (num % 2 == 0):
         return "Even!"
     else:
         return "Odd!"
 
-problem_3(num):
+def problem_3(n):
     for i in range(1,11):
         print(f"{n} x {i} = {n*i}")
 
-problem_4(num):
+def problem_4(num):
     while num >= 0:
         print(num)
-        n -= 2
+        num -= 2
 
-problem_5(temp):
+def problem_5(temp):
     return(f"{((temp-32)*5)/9}")
 
 
@@ -151,6 +151,6 @@ print("\nTesting Problem 4:")
 problem_4(20) # will count down from 20 to 0 by 2's.
 
 print("\nTesting Problem 5:")
-problem_5(32) # Will return 0
+print(problem_5(30)) # Will return 0
 
 
