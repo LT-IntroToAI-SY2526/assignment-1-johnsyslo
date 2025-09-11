@@ -27,7 +27,9 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n < 0:
+        return -1 * n
+    return n
 
 
 def factorial(n: int) -> int:
@@ -40,8 +42,10 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
-
+    answer = 1
+    for num in range(1, n+1):
+        answer = answer * num
+    return answer
 
 T = TypeVar("T")
 
@@ -57,7 +61,12 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+
+    result = []
+    for x in range(len(lst)):
+        if x % 2 == 0:
+            result.append(lst[x])
+    return result
 
 
 def sum_list(lst: List[int]) -> int:
@@ -70,7 +79,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    total = 0
+    for x in range(len(lst)):
+        total += lst[x]
+    return total
 
 
 def mean(lst: List[int]) -> float:
@@ -82,7 +94,7 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    return sum(lst) / len(lst)
 
 
 def median(lst: List[int]) -> float:
@@ -97,7 +109,12 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    n = len(lst)
+    mid =  n // 2
+    if n % 2 == 1:
+        return float(lst[mid])
+    else:
+        return (lst[mid - 1] + lst[mid]) / 2.0
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -119,8 +136,11 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
-
+    i = 0
+    while len(lst) > 2:
+        i = (i + 2) % len(lst)
+        lst.pop(i)
+    return lst
 
 # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
